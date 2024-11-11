@@ -16,6 +16,16 @@ public class Slizerin extends Hogwarts {
         this.ingenuity = ingenuity;
     }
 
+    public static void comparingStudentsSlizerin(Slizerin studentOne, Slizerin studentTwo) {
+        if (studentOne.getTotalPointsSlizerin() > studentTwo.getTotalPointsSlizerin()) {
+            System.out.println(studentOne + " имеет свойства сильнее, чем " + studentTwo);
+        } else if (studentOne.getTotalPointsSlizerin() < studentTwo.getTotalPointsSlizerin()) {
+            System.out.println(studentTwo + " имеет свойства сильнее, чем " + studentOne);
+        } else {
+            System.out.println(" Ученики равны в свойствах силы характеристик.");
+        }
+    }
+
     public int getTrick() {
         return trick;
     }
@@ -49,26 +59,9 @@ public class Slizerin extends Hogwarts {
                 ", ingenuity=" + ingenuity +
                 '.';
     }
-//        @Override
-//        public String toStringCommon() {
-//            return "Ученик Hogwarts{" +
-//                    "name='" + NAME + '\'' +
-//                    ", powerOfMagic=" + powerOfMagic +
-//                    ", transgresDistance=" + transgresDistance +
-//                    '.';
-//    }
 
     private int getTotalPointsSlizerin() {
         return getTrick() + getDetermination() + getLustForPower() + getAmbition()
                 + getIngenuity() + getTransgresDistance() + getTransgresDistance();
-    }
-    public static void comparingStudentsSlizerin(Slizerin studentOne, Slizerin studentTwo) {
-        if (studentOne.getTotalPointsSlizerin() > studentTwo.getTotalPointsSlizerin()) {
-            System.out.println(studentOne + " имеет свойства сильнее, чем " + studentTwo);
-        } else if (studentOne.getTotalPointsSlizerin() < studentTwo.getTotalPointsSlizerin()) {
-            System.out.println(studentTwo + " имеет свойства сильнее, чем " + studentOne);
-        } else {
-            System.out.println(" Ученики равны в свойствах силы характеристик.");
-        }
     }
 }

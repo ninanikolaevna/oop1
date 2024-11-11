@@ -12,6 +12,16 @@ public class Kogtevran extends Hogwarts {
         this.creativity = creativity;
     }
 
+    public static void comparingStudentsKogtevran(Kogtevran studentOne, Kogtevran studentTwo) {
+        if (studentOne.getTotalPointsKogtevran() > studentTwo.getTotalPointsKogtevran()) {
+            System.out.println(studentOne + " имеет свойства сильнее, чем " + studentTwo);
+        } else if (studentOne.getTotalPointsKogtevran() < studentTwo.getTotalPointsKogtevran()) {
+            System.out.println(studentTwo + " имеет свойства сильнее, чем " + studentOne);
+        } else {
+            System.out.println(" Ученики равны в свойствах силы характеристик.");
+        }
+    }
+
     public int getMind() {
         return mind;
     }
@@ -55,24 +65,8 @@ public class Kogtevran extends Hogwarts {
                 ", creativity=" + creativity +
                 '.';
     }
-//        @Override
-//        public String toStringKogtevranPoints() {
-//            return "Ученик Hogwarts{" +
-//                    "name='" + NAME + '\'' +
-//                    ", powerOfMagic=" + powerOfMagic +
-//                    ", transgresDistance=" + transgresDistance +
-//                    '.';
-//    }
-    private int getTotalPointsKogtevran(){
+
+    private int getTotalPointsKogtevran() {
         return getMind() + getWisdom() + getCreativity() + getTransgresDistance() + getTransgresDistance();
-    }
-    public static void comparingStudentsKogtevran(Kogtevran studentOne, Kogtevran studentTwo) {
-        if (studentOne.getTotalPointsKogtevran() > studentTwo.getTotalPointsKogtevran()) {
-            System.out.println(studentOne + " имеет свойства сильнее, чем " + studentTwo);
-        } else if (studentOne.getTotalPointsKogtevran() < studentTwo.getTotalPointsKogtevran()) {
-            System.out.println(studentTwo + " имеет свойства сильнее, чем " + studentOne);
-        } else {
-            System.out.println(" Ученики равны в свойствах силы характеристик.");
-        }
     }
 }

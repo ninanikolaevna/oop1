@@ -43,7 +43,7 @@ public class Hogwarts {
     }
 
 
-     int getTotalCommonPoints() {
+    int getTotalCommonPoints() {
         return powerOfMagic + transgresDistance;
     }
 

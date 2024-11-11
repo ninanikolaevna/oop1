@@ -12,6 +12,16 @@ public class Puffenduj extends Hogwarts {
         this.honesty = honesty;
     }
 
+    public static void comparingStudentsPuffenduj(Puffenduj studentOne, Puffenduj studentTwo) {
+        if (studentOne.getTotalPointsPuffenduj() > studentTwo.getTotalPointsPuffenduj()) {
+            System.out.println(studentOne + " имеет свойства сильнее, чем " + studentTwo);
+        } else if (studentOne.getTotalPointsPuffenduj() < studentTwo.getTotalPointsPuffenduj()) {
+            System.out.println(studentTwo + " имеет свойства сильнее, чем " + studentOne);
+        } else {
+            System.out.println(" Ученики равны в свойствах силы характеристик.");
+        }
+    }
+
     public int getDilidence() {
         return dilidence;
     }
@@ -36,25 +46,7 @@ public class Puffenduj extends Hogwarts {
                 '.';
     }
 
-    //        @Override
-//        public String toString() {
-//            return "Ученик Hogwarts{" +
-//                    "name='" + NAME + '\'' +
-//                    ", powerOfMagic=" + powerOfMagic +
-//                    ", transgresDistance=" + transgresDistance +
-//                    '.';
-//    }
     private int getTotalPointsPuffenduj() {
         return getDilidence() + getLoyalty() + getHonesty() + getTransgresDistance() + getTransgresDistance();
-    }
-
-    public static void comparingStudentsPuffenduj(Puffenduj studentOne, Puffenduj studentTwo) {
-        if (studentOne.getTotalPointsPuffenduj() > studentTwo.getTotalPointsPuffenduj()) {
-            System.out.println(studentOne + " имеет свойства сильнее, чем " + studentTwo);
-        } else if (studentOne.getTotalPointsPuffenduj() < studentTwo.getTotalPointsPuffenduj()) {
-            System.out.println(studentTwo + " имеет свойства сильнее, чем " + studentOne);
-        } else {
-            System.out.println(" Ученики равны в свойствах силы характеристик.");
-        }
     }
 }

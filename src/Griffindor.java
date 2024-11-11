@@ -10,6 +10,15 @@ public class Griffindor extends Hogwarts {
         this.bravery = bravery;
     }
 
+    public static void comparingStudentsGriffindor(Griffindor studentOne, Griffindor studentTwo) {
+        if (studentOne.getTotalPointsGriffindor() > studentTwo.getTotalPointsGriffindor()) {
+            System.out.println(studentOne + " имеет свойства сильнее, чем " + studentTwo);
+        } else if (studentOne.getTotalPointsGriffindor() < studentTwo.getTotalPointsGriffindor()) {
+            System.out.println(studentTwo + " имеет свойства сильнее, чем " + studentOne);
+        } else {
+            System.out.println(" Ученики равны в свойствах силы характеристик.");
+        }
+    }
 
     public int getNobility() {
         return nobility;
@@ -34,9 +43,7 @@ public class Griffindor extends Hogwarts {
                 '.';
     }
 
-
-    public String toStringCommon()
-    {
+    public String toStringCommon() {
         return "Ученик Hogwarts{" +
                 "name='" + NAME + '\'' +
                 ", powerOfMagic=" + powerOfMagic +
@@ -46,15 +53,6 @@ public class Griffindor extends Hogwarts {
 
     private int getTotalPointsGriffindor() {
         return getNobility() + getHonour() + getBravery() + getTransgresDistance() + getTransgresDistance();
-    }
-    public static void comparingStudentsGriffindor(Griffindor studentOne, Griffindor studentTwo) {
-        if (studentOne.getTotalPointsGriffindor() > studentTwo.getTotalPointsGriffindor()) {
-            System.out.println(studentOne + " имеет свойства сильнее, чем " + studentTwo);
-        } else if (studentOne.getTotalPointsGriffindor() < studentTwo.getTotalPointsGriffindor()) {
-            System.out.println(studentTwo + " имеет свойства сильнее, чем " + studentOne);
-        } else {
-            System.out.println(" Ученики равны в свойствах силы характеристик.");
-        }
     }
 }
 
